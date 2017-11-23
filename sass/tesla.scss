@@ -1,0 +1,39 @@
+/* Colors
+-----------------------------------------------------------------------------*/
+
+$hover-color: rgba(255, 255, 255, 0.2);
+$gray-800: rgba(0, 0, 0, 0.8);
+$gray-900: rgba(0, 0, 0, 0.9);
+$body-bg: hsl(0, 0, 0);
+$body-color: rgba(255, 255, 255, 0.4);
+$jumbotron-bg: rgba(255, 255, 255, 0.2);
+
+/* Fonts
+-----------------------------------------------------------------------------*/
+
+$font-family-sans-serif: Montserrat;
+
+/* Misc
+-----------------------------------------------------------------------------*/
+
+$border-radius: 40px;
+$btn-border-radius: 40px;
+$input-btn-padding-x: 30px;
+
+/* Do the Import
+-----------------------------------------------------------------------------*/
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Do the Import
+-----------------------------------------------------------------------------*/
+
+.btn {
+    border-color: $body-color;
+    text-transform: uppercase;
+}
+
+.btn-dark:hover {
+    border-color: $body-color;
+    background-color: $hover-color;
+}
