@@ -10,7 +10,16 @@ Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
 -----------------------------------------------------------------------------*/
 
 .site-header {
+    margin-bottom: var(--space-stack-xl);
+}
+
+
+/* Section Header
+-----------------------------------------------------------------------------*/
+
+.section__header {
     border-bottom: solid 1px var(--color-borders);
+    padding-bottom: var(--space-stack);
     margin-bottom: var(--space-stack-xl);
 }
 
@@ -22,6 +31,4 @@ Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
 /* Footer
 -----------------------------------------------------------------------------*/
 
-.footer {
-    border-top: solid 1px var(--color-borders);
-}
+.footer {}

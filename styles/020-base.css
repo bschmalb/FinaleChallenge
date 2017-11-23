@@ -16,7 +16,7 @@ Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
     --color-brand: rgb(183, 68, 44);
     --color-text: #000;
     --color-headlines: #666;
-    --color-borders: rgba(0, 0, 0, 0.3);
+    --color-borders: rgba(255, 255, 255, 0.3);
     /* 
     Abstände. Hierzu gibt es auch ein schönes Konzept
     https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62 */
@@ -51,12 +51,22 @@ Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
     /* 
     Schrift
     ----------------------------------------*/
-    --fontfamily: "Helvetica Neue", Helvetica, sans-serif;
     --fontsize: 1rem;
     --fontsize-s: 0.75rem;
     --fontsize-l: 1.5rem;
     --fontsize-xl: 2rem;
     --fontsize-xxl: 3rem;
+    /* ----------------------------------------
+    Tesla Material
+    ----------------------------------------*/
+    /* 
+    Radien
+    ----------------------------------------*/
+    --tsl-border-radius: 40px;
+    /* 
+    Schatten
+    ----------------------------------------*/
+    --tsl-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -65,7 +75,6 @@ Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
 
 html,
 body {
-    font-family: var(--fontfamily);
     font-size: 18px;
     font-weight: 400;
     color: var(--color-text);
