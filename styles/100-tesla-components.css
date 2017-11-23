@@ -15,3 +15,22 @@
 .tsl-button:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
+
+.tsl-button.tsl-has-icons {
+    text-transform: none;
+}
+
+
+/* Icons
+-----------------------------------------------------------------------------*/
+
+.tsl-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.tsl-navigate {
+    background-image: url("../images/tsl/navigate-icon.svg");
+    background-size: 20px 20px;
+}
