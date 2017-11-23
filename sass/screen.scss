@@ -1,0 +1,49 @@
+/* Do the Import
+-----------------------------------------------------------------------------*/
+
+@import "tesla";
+
+/* 
+-----------------------------------------------------------------------------*/
+
+.screen{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+
+}
+
+.screen__top-row{
+	display: grid;
+	grid-template-columns: 25% 1fr;
+}
+
+.top-row__right{
+	
+	background-position: center center;
+	background-size: cover;
+	
+	img{
+		width: 100%;
+	}
+}
+
+.top-row__left{
+	img{
+		width: 100%;
+	}
+}
+.screen__main-control img{
+	width: 100%;
+}
+
+.screen__bottom-row{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.bottom-row__item{
+	width: 100%;
+	background-color: #444;
+}
