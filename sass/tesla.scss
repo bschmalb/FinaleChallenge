@@ -1,12 +1,16 @@
 /* Colors
 -----------------------------------------------------------------------------*/
 
-$hover-color: rgba(255, 255, 255, 0.2);
-$gray-800: rgba(0, 0, 0, 0.8);
-$gray-900: rgba(0, 0, 0, 0.9);
+$gray-500: hsl(0, 0, 50);
+$gray-600: hsl(0, 0, 40);
+$gray-700: hsl(0, 0, 30);
+$gray-800: hsl(0, 0, 20);
+$gray-900: hsl(0, 0, 10);
 $body-bg: hsl(0, 0, 0);
-$body-color: rgba(255, 255, 255, 0.4);
+$body-color: $gray-500;
+$hover-color: $gray-500;
 $jumbotron-bg: rgba(255, 255, 255, 0.2);
+$border-color: #777;
 
 /* Fonts
 -----------------------------------------------------------------------------*/
@@ -17,6 +21,7 @@ $font-family-sans-serif: Montserrat;
 -----------------------------------------------------------------------------*/
 
 $border-radius: 40px;
+$border-radius-sm: 30px;
 $btn-border-radius: 40px;
 $input-btn-padding-x: 30px;
 
@@ -25,15 +30,44 @@ $input-btn-padding-x: 30px;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-/* Do the Import
+/* Buttons
 -----------------------------------------------------------------------------*/
 
 .btn {
     border-color: $body-color;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-transform: uppercase;
 }
 
 .btn-dark:hover {
     border-color: $body-color;
     background-color: $hover-color;
+}
+
+.btn.is-active {
+    background-color: $hover-color !important;
+    color: #fff !important;
+}
+
+
+/* Buttongroups
+-----------------------------------------------------------------------------*/
+
+.btn-group .btn {
+    color: $border-color;
+    background-color: $gray-800;
+    border-color: $gray-800;
+}
+
+
+/* Basic Rules
+-----------------------------------------------------------------------------*/
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.container+.container {
+    margin-top: 3rem;
 }

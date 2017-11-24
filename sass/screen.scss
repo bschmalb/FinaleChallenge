@@ -3,23 +3,27 @@
 
 @import "tesla";
 
-/* 
+/* Screen Basics
 -----------------------------------------------------------------------------*/
 
 .screen{
-	position: absolute;
 	width: 100vw;
 	height: 100vh;
-
+	display: flex;
+	flex-direction: column;
 }
 
-.screen__top-row{
+
+/* Screen Top Area
+-----------------------------------------------------------------------------*/
+
+.screen__top-area{
 	display: grid;
 	grid-template-columns: 25% 1fr;
 }
 
 .top-row__right{
-	
+	overflow: hidden;
 	background-position: center center;
 	background-size: cover;
 	
@@ -33,17 +37,33 @@
 		width: 100%;
 	}
 }
+
+/* Screen Main Control Strip
+-----------------------------------------------------------------------------*/
+
 .screen__main-control img{
 	width: 100%;
 }
 
-.screen__bottom-row{
+/* Screen Bottom Area
+-----------------------------------------------------------------------------*/
+
+.screen__bottom-area{
+	flex-grow: 1;
 	display: grid;
-	grid-gap: 20px;
 	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	
 }
 
-.bottom-row__item{
-	width: 100%;
-	background-color: #444;
+.bottom-area__item{
+	border: solid 1px #333;
 }
+
+@media only screen 
+  and (orientation: landscape){
+	  .bottom-area__item:nth-child(n+3){
+		  display: none;
+	  }
+}
+
