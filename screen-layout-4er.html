@@ -18,16 +18,16 @@
 	<main class="screen" id="screen">
 		
 		<section class="screen__top-area">
-			<div class="top-row__left">
+			<div id="top-row__left" class="top-row__left">
 				<div class="screen__content">
 					<img src="images/tsl/tsl-sidebar.svg" alt="sidebar" id="tsl-sidebar">
 				</div>
 			</div>
-			<div class="top-row__right">
-				<div class="screen__content fixed" draggable="true">
+			<div class="top-row__right" data-trigger="fullscreen" >
+				<div class="screen__content fixed" draggable="true" data-trigger="fullscreenChild">
 					
-					<div class="tsl-map" style="background-image: url(images/tsl/tsl-map.svg)">
-					
+					<div class="tsl-map" style="background-image: url(images/tsl/tsl-map.svg);">
+						
 				</div>
 			</div>
 		</section>
@@ -85,6 +85,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="scripts/tesla.js"></script>
+	
+	<!-- Drag & Drop zwischen den Screens -->
+  <script src="scripts/tesla-dnd.js"></script>	
+  
+  <!-- Volle Breite für die Karte -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.5/zingtouch.min.js"></script>
+  <script src="scripts/tesla-fs-map.js"></script>
+  
+  
 </body>
 

@@ -1,4 +1,5 @@
-/*
+/* Drag and Drop für die Screens
+	Script im Kern übernommen von Eric Bidelman
 	https://www.html5rocks.com/de/tutorials/dnd/basics/
 ----------------------------------------------------------------------------- */
 

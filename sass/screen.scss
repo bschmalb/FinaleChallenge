@@ -23,15 +23,23 @@
 
 .top-row__left{
 	width: 30%;
-	
+	transition: width 0.5s;
 	img{
 		opacity: 0.8;
 	}
 }
 
+.top-row__left.is-hidden{
+	width: 0;
+}
+
 .top-row__right{
 	position: relative;
 	width: 70%;
+}
+
+.top-row__right.is-large{
+	width: 100%;
 }
 
 
@@ -44,6 +52,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	background-size: cover;
 }
 
 
