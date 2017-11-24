@@ -35,13 +35,16 @@ $input-btn-padding-x: 30px;
 
 .btn {
     border-color: $body-color;
+    color: $body-color;
+    background-color: transparent;
     padding-left: 2rem;
     padding-right: 2rem;
     text-transform: uppercase;
 }
 
-.btn-dark:hover {
+.btn:hover {
     border-color: $body-color;
+    color: #fff;
     background-color: $hover-color;
 }
 

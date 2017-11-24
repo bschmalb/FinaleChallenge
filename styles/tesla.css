@@ -5877,12 +5877,15 @@ a.text-dark:focus, a.text-dark:hover {
 -----------------------------------------------------------------------------*/
 .btn {
   border-color: gray;
+  color: gray;
+  background-color: transparent;
   padding-left: 2rem;
   padding-right: 2rem;
   text-transform: uppercase; }
 
-.btn-dark:hover {
+.btn:hover {
   border-color: gray;
+  color: #fff;
   background-color: gray; }
 
 .btn.is-active {
