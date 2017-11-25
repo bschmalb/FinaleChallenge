@@ -5912,10 +5912,11 @@ h2 {
 /* Screen Basics
 -----------------------------------------------------------------------------*/
 .screen {
-  height: 90vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column; }
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  background-color: black;
+  align-content: stretch; }
 
 /* Screen Top Area
 -----------------------------------------------------------------------------*/
@@ -5924,20 +5925,16 @@ h2 {
   z-index: 9; }
 
 .top-row__left {
-  width: 30%;
-  transition: width 0.5s; }
-  .top-row__left img {
-    opacity: 0.8; }
+  transition: flex 0.5s;
+  flex: 1 1 auto; }
 
 .top-row__left.is-hidden {
-  width: 0; }
+  flex: 0 0 auto; }
 
 .top-row__right {
+  flex: 2 1 auto;
   position: relative;
-  width: 70%; }
-
-.top-row__right.is-large {
-  width: 100%; }
+  transition: width 2.5s; }
 
 /* Map
 -----------------------------------------------------------------------------*/
@@ -5961,21 +5958,15 @@ h2 {
 /* Screen Bottom Area
 -----------------------------------------------------------------------------*/
 .screen__bottom-area {
-  flex: auto;
-  display: flex;
-  flex-wrap: wrap;
   z-index: 10;
-  background-color: black; }
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
 
 .bottom-area__item {
-  display: flex;
-  padding: 0.5em;
-  width: 50%;
-  border: solid 1px #333; }
-
-@media only screen and (orientation: landscape) {
-  .bottom-area__item:nth-child(n+3) {
-    display: none; } }
+  border: solid 1px #333;
+  overflow: hidden;
+  position: relative; }
 
 /* Screen Content
 -----------------------------------------------------------------------------*/
@@ -5991,8 +5982,30 @@ h2 {
     width: 100%; }
 
 .screen__bottom-area .screen__content {
-  overflow: auto; }
+  overflow: auto;
+  position: absolute; }
 
+/* Screen Aspect Ratios
+-----------------------------------------------------------------------------*/
+/*
+@media screen and (min-aspect-ratio: 3/4) {
+    .bottom-area__item:nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+    .screen {
+        height: 200vH;
+    }
+    .screen__bottom-area {
+        height: 100vh;
+    }
+    .bottom-area__item:nth-child(n+3) {
+        display: block;
+    }
+}
+*/
 /* Drag & Drop
 -----------------------------------------------------------------------------*/
 /* Prevent the text contents of draggable elements from being selectable. */
