@@ -5912,7 +5912,7 @@ h2 {
 /* Screen Basics
 -----------------------------------------------------------------------------*/
 .screen {
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   display: flex;
   flex-direction: column; }
@@ -5920,7 +5920,8 @@ h2 {
 /* Screen Top Area
 -----------------------------------------------------------------------------*/
 .screen__top-area {
-  display: flex; }
+  display: flex;
+  z-index: 9; }
 
 .top-row__left {
   width: 30%;
@@ -5950,6 +5951,10 @@ h2 {
 
 /* Screen Main Control Strip
 -----------------------------------------------------------------------------*/
+.screen__main-control {
+  background-color: black;
+  z-index: 10; }
+
 .screen__main-control img {
   width: 100%; }
 
@@ -5958,7 +5963,9 @@ h2 {
 .screen__bottom-area {
   flex: auto;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 10;
+  background-color: black; }
 
 .bottom-area__item {
   display: flex;

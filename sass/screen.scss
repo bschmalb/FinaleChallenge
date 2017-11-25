@@ -6,140 +6,146 @@
 /* Screen Basics
 -----------------------------------------------------------------------------*/
 
-.screen{
-	height: 100vh;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+.screen {
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* Screen Top Area
 -----------------------------------------------------------------------------*/
 
-.screen__top-area{
-	display: flex;
+.screen__top-area {
+    display: flex;
+    z-index: 9;
 }
 
-.top-row__left{
-	width: 30%;
-	transition: width 0.5s;
-	img{
-		opacity: 0.8;
-	}
+.top-row__left {
+    width: 30%;
+    transition: width 0.5s;
+    img {
+        opacity: 0.8;
+    }
 }
 
-.top-row__left.is-hidden{
-	width: 0;
+.top-row__left.is-hidden {
+    width: 0;
 }
 
-.top-row__right{
-	position: relative;
-	width: 70%;
+.top-row__right {
+    position: relative;
+    width: 70%;
 }
 
-.top-row__right.is-large{
-	width: 100%;
+.top-row__right.is-large {
+    width: 100%;
 }
 
 
 /* Map
 -----------------------------------------------------------------------------*/
 
-.tsl-map{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-size: cover;
+.tsl-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
 }
 
 
 /* Screen Main Control Strip
 -----------------------------------------------------------------------------*/
 
-.screen__main-control img{
-	width: 100%;
+.screen__main-control {
+    background-color: $body-bg;
+    z-index: 10;
 }
+
+.screen__main-control img {
+    width: 100%;
+}
+
 
 /* Screen Bottom Area
 -----------------------------------------------------------------------------*/
 
-.screen__bottom-area{
-	flex: auto;
-  display: flex;
-  flex-wrap: wrap;
+.screen__bottom-area {
+    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10;
+    background-color: $body-bg;
 }
 
-.bottom-area__item{
-  display: flex; 
-  padding: 0.5em;
-  width: 50%;
-	border: solid 1px #333;
+.bottom-area__item {
+    display: flex;
+    padding: 0.5em;
+    width: 50%;
+    border: solid 1px #333;
 }
 
-@media only screen 
-  and (orientation: landscape){
-	  .bottom-area__item:nth-child(n+3){
-		  display: none;
-	  }
+@media only screen and (orientation: landscape) {
+    .bottom-area__item:nth-child(n+3) {
+        display: none;
+    }
 }
+
 
 /* Screen Content
 -----------------------------------------------------------------------------*/
 
-.screen__content{
-	position: relative;
-	width: 100%;
-	height: 100%;	
-	overflow: hidden;
-	background-position: center center;
-	background-size: cover;
-	padding: 1rem;
-	
-	img{
-		width: 100%;
-	}
+.screen__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    padding: 1rem;
+    img {
+        width: 100%;
+    }
 }
 
-.screen__bottom-area .screen__content{
-	overflow: auto;
+.screen__bottom-area .screen__content {
+    overflow: auto;
 }
-
 
 
 /* Drag & Drop
 -----------------------------------------------------------------------------*/
 
+
 /* Prevent the text contents of draggable elements from being selectable. */
+
 [draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  /* Required to make elements draggable in old WebKit */
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
 }
 
-[draggable]:hover{
-	cursor: move;
+[draggable]:hover {
+    cursor: move;
 }
 
 
 /* Helper
 -----------------------------------------------------------------------------*/
 
-.tsl-fixed{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+.tsl-fixed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
-
-.tsl-over{
-	
-}
+.tsl-over {}
