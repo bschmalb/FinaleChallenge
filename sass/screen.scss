@@ -21,6 +21,38 @@
 }
 
 
+/* Screen Layouts
+-----------------------------------------------------------------------------*/
+
+.screen.TwoRows-OneCol {
+    #section2,
+    #section4 {
+        display: none;
+    }
+    .screen__bottom-area {
+        grid-template-columns: 1fr;
+    }
+}
+
+.screen.OneRow-OneCol {
+    #section2,
+    #section3,
+    #section4 {
+        display: none;
+    }
+    .screen__bottom-area {
+        grid-template-columns: 1fr;
+    }
+}
+
+.screen.OneRow-TwoCols {
+    #section3,
+    #section4 {
+        display: none;
+    }
+}
+
+
 /* Screen Top Area
 -----------------------------------------------------------------------------*/
 
@@ -90,7 +122,7 @@
 }
 
 .bottom-area__item {
-    border: solid 1px #333;
+    border: solid 1px #222;
     overflow: hidden;
     position: relative;
 }

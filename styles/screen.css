@@ -5921,6 +5921,27 @@ h2 {
 .screen img {
   width: 100%; }
 
+/* Screen Layouts
+-----------------------------------------------------------------------------*/
+.screen.TwoRows-OneCol #section2,
+.screen.TwoRows-OneCol #section4 {
+  display: none; }
+
+.screen.TwoRows-OneCol .screen__bottom-area {
+  grid-template-columns: 1fr; }
+
+.screen.OneRow-OneCol #section2,
+.screen.OneRow-OneCol #section3,
+.screen.OneRow-OneCol #section4 {
+  display: none; }
+
+.screen.OneRow-OneCol .screen__bottom-area {
+  grid-template-columns: 1fr; }
+
+.screen.OneRow-TwoCols #section3,
+.screen.OneRow-TwoCols #section4 {
+  display: none; }
+
 /* Screen Top Area
 -----------------------------------------------------------------------------*/
 .screen__top-area {
@@ -5974,7 +5995,7 @@ h2 {
   grid-template-columns: 1fr 1fr; }
 
 .bottom-area__item {
-  border: solid 1px #333;
+  border: solid 1px #222;
   overflow: hidden;
   position: relative; }
 
