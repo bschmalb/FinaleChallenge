@@ -9,9 +9,15 @@
 .screen {
     height: 100vh;
     display: grid;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto 1fr;
     background-color: $body-bg;
     align-content: stretch;
+}
+
+.screen {
+    img {
+        width: 100%;
+    }
 }
 
 
@@ -20,20 +26,28 @@
 
 .screen__top-area {
     display: flex;
+    flex-direction: column;
     z-index: 9;
 }
 
-.top-row__left {
+.top-area__upper-content {
+    display: flex;
+    flex-direction: row;
+    transition: flex 0.5s 0.5s;
+}
+
+.upper-content__left {
     transition: flex 0.5s;
     flex: 1 1 auto;
 }
 
-.top-row__left.is-hidden {
+.upper-content__left.is-hidden {
     flex: 0 0 auto;
+    width: 0;
 }
 
-.top-row__right {
-    flex: 2 1 auto;
+.upper-content__right {
+    flex: 4 1 auto;
     position: relative;
     transition: width 2.5s;
 }
@@ -98,9 +112,15 @@
     }
 }
 
+.screen__content.is-scrollable {
+    overflow: auto !important;
+}
+
 .screen__bottom-area .screen__content {
-    overflow: auto;
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 
@@ -117,8 +137,12 @@
     .screen {
         height: 200vH;
     }
-    .screen__bottom-area {
+    .screen__bottom-area,
+    .screen__top-area {
         height: 100vh;
+    }
+    .top-area__upper-content {
+        flex: 1 1 auto;
     }
     .bottom-area__item:nth-child(n+3) {
         display: block;
