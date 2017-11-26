@@ -1,16 +1,47 @@
-/* Colors
+/* Color palette
 -----------------------------------------------------------------------------*/
 
+$blue: #007BE4 !default;
+$indigo: #6610f2 !default;
+$purple: #7071C5 !default;
+$pink: #e83e8c !default;
+$red: #D0021B !default;
+$orange: #fd7e14 !default;
+$yellow: #FFBD0A !default;
+$green: #25CB55 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$gray-100: hsl(0, 0, 90);
+$gray-200: hsl(0, 0, 80);
+$gray-300: hsl(0, 0, 70);
+$gray-400: hsl(0, 0, 60);
 $gray-500: hsl(0, 0, 50);
 $gray-600: hsl(0, 0, 40);
 $gray-700: hsl(0, 0, 30);
 $gray-800: hsl(0, 0, 20);
 $gray-900: hsl(0, 0, 10);
-$body-bg: hsl(0, 0, 0);
+
+/* Tesla Colors
+-----------------------------------------------------------------------------*/
+
+$tsl-blue: #007BE4 !default;
+$tsl-purple: #7071C5 !default;
+$tsl-red: #D0021B !default;
+$tsl-yellow: #FFBD0A !default;
+$tsl-green: #25CB55 !default;
+$tsl-black: #000 !default;
+$tsl-white: #fff !default;
+$tsl-dark: $gray-800 !default;
+$theme-colors: ( "tsl-blue": $tsl-blue, "tsl-purple": $tsl-purple, "tsl-red": $tsl-red, "tsl-yellow": $tsl-yellow, "tsl-green": $tsl-green, "tsl-black": $tsl-black, "tsl-white": $tsl-white, "tsl-dark": $tsl-dark);
+
+/* Element Colors
+-----------------------------------------------------------------------------*/
+
+$body-bg: $gray-900;
 $body-color: $gray-500;
 $hover-color: $gray-500;
-$jumbotron-bg: rgba(255, 255, 255, 0.2);
-$border-color: #777;
+$jumbotron-bg: $gray-800;
+$border-color: $gray-400;
 
 /* Fonts
 -----------------------------------------------------------------------------*/
@@ -20,7 +51,6 @@ $font-family-sans-serif: Montserrat;
 
 /* Misc
 -----------------------------------------------------------------------------*/
-
 
 $border-radius-sm: 30px;
 $btn-border-radius: 40px;
