@@ -10,7 +10,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    background-color: $body-bg;
+    background-color: #000;
     align-content: stretch;
 }
 
@@ -71,6 +71,7 @@
 .upper-content__left {
     transition: flex 0.5s;
     flex: 1 1 auto;
+    width: 20%;
 }
 
 .upper-content__left.is-hidden {

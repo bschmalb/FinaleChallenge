@@ -6743,7 +6743,7 @@ h2 {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  background-color: #1a1a1a;
+  background-color: #000;
   align-content: stretch; }
 
 .screen img {
@@ -6784,7 +6784,8 @@ h2 {
 
 .upper-content__left {
   transition: flex 0.5s;
-  flex: 1 1 auto; }
+  flex: 1 1 auto;
+  width: 20%; }
 
 .upper-content__left.is-hidden {
   flex: 0 0 auto;
